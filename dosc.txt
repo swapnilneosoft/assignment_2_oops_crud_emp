@@ -1,0 +1,62 @@
+ -> Abstract Class 
+       * An abstract class is a class that cannot be instantiated. Typically, 
+       * an abstract defines an interface for other classes to extend.
+
+       * An abstract class can have properties and methods as a regular class.
+         But it cannot be instantiated.
+
+       * Similar to an abstract class, an abstract method is a method that does not 
+         have an implementation. To define an abstract method, you also use the abstract
+         keyword before the method signature like this
+            e.g :
+                abstract class className(){ //code };
+                abstract function methodName(arguments){};
+        
+
+-> final class 
+        *To prevent the method in the child class from overriding the method in the parent class,
+         we can prefix the method with the final keyword:
+            e.g 
+                public final function methodName() 
+                {   //...      };
+
+-> function overloading : __call()
+
+
+-> function overriding 
+        * Method overriding allows a child class to provide a specific implementation of 
+        a method already provided by its parent class.
+        * PHP will decide which method (overridden or overriding method) to call based on the object used to invoke
+         the method.If an object of the parent class invokes the method, PHP will execute the overridden method.
+         But if an object of the child class invokes the method, PHP will execute the overriding method.
+
+-> static methods and properties 
+        * PHP allows you to access the methods and properties in the context of a class rather than an object.
+         Such methods and properties are class methods and properties.
+        * Class methods and class properties are called static methods and properties.
+        keyword  
+            e.g :
+                public static function funName(){};
+
+        * Since a static method is bound to a class, not an individual instance of the class,
+          We can acces $this inside the static method
+        * Instead of $this we can use self keyword which referes to the current class.
+
+-> class constants 
+        * to define a constant that is specific to a class 
+        * To define a constant of a class,  use the const keyword.
+        e.g:
+            class Circle
+            {
+                const PI = "3.14";
+            }
+
+
+-> interface 
+    * An interface allows  to specify a contract that a class must implement. 
+    To define an interface,  use the interface keyword as follows.
+    e.g:
+        interface MyInterface
+        {
+            //...
+        }
